@@ -1,0 +1,28 @@
+USE [Mercadolibre]
+GO
+
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbCxoneMeli]( 
+	[USERLDAP]          NVARCHAR(200)
+	,[LOB]              VARCHAR(100)
+	,[status]           NVARCHAR(200)
+	,[startdate]        DATETIME
+	,[FlagIniFinTurno]  VARCHAR(100)
+	,[DateDim]          DATE
+	,[test]             SMALLINT,
+ CONSTRAINT [pkCxoneMeli] PRIMARY KEY CLUSTERED 
+(
+    [USERLDAP]
+	,[startdate]
+	,[test]
+
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
